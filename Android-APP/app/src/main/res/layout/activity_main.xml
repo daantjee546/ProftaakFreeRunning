@@ -58,7 +58,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        android:onClick="buttonclickRegister"/>
 
     <Button
         android:id="@+id/btnLogin"
@@ -71,7 +72,8 @@
         app:layout_constraintBottom_toTopOf="@+id/btnRegristreren"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbBlijfIngelogd" />
+        app:layout_constraintTop_toBottomOf="@+id/cbBlijfIngelogd"
+        android:onClick="buttonclickLogin"/>
 
     <CheckBox
         android:id="@+id/cbBlijfIngelogd"
