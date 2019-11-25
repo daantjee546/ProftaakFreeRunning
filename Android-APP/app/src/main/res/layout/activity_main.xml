@@ -7,12 +7,110 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="151dp"
+        android:text="Login"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/tbIdDruppel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/tvNaam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdDruppel" />
+
+    <TextView
+        android:id="@+id/tvIdDruppel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="259dp"
+        android:text="ID druppel:"
+        app:layout_constraintBottom_toTopOf="@+id/tbIdDruppel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
+
+    <Button
+        android:id="@+id/btnRegristreren"
+        android:layout_width="160dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="85dp"
+        android:text="Registreren"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="160dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="15dp"
+        android:text="Login"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegristreren"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbBlijfIngelogd" />
+
+    <CheckBox
+        android:id="@+id/cbBlijfIngelogd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="25dp"
+        android:text="Blijf ingelogd"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbIdNaam" />
+
+    <EditText
+        android:id="@+id/tbIdNaam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/cbBlijfIngelogd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNaam" />
+
+    <TextView
+        android:id="@+id/tvNaam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginEnd="285dp"
+        android:text="Naam:"
+        app:layout_constraintBottom_toTopOf="@+id/tbIdNaam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbIdDruppel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
