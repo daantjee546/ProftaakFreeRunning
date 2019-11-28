@@ -1,7 +1,10 @@
 package com.example.proftaakfreerunning
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ListView
 
@@ -26,4 +29,15 @@ class Activity2DataScreen : AppCompatActivity() {
 
         lv?.adapter = adapter
     }
+
+    fun afmelden(view: View)
+    {
+        val filename = "myfile"
+        val fileContents = "false"
+        this.openFileOutput(filename, Context.MODE_PRIVATE).use {
+            it.write(fileContents.toByteArray())
+        }
+        startActivity(Intent(this, MainActivity::class.java))
+    }
+
 }
