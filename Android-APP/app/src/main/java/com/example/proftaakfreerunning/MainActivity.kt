@@ -8,6 +8,7 @@ import android.content.Intent
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.os.Build.ID
 import android.widget.Toast
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
@@ -39,12 +40,6 @@ class MainActivity : AppCompatActivity() {
 
     fun buttonclickLogin(view: View)
     {
-        // Write a message to the database
-        val database = FirebaseDatabase.getInstance()
-        val myRef = database.getReference("message")
-
-        myRef.setValue("Hello, World!")
-
         if (cbBlijfIngelogd.isChecked)
         {
             val filename = "myfile"
@@ -61,5 +56,4 @@ class MainActivity : AppCompatActivity() {
     {
         startActivity(Intent(this@MainActivity, Activity3RegisterScreen::class.java))
     }
-
 }

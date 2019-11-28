@@ -18,7 +18,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbIdDruppel4" />
+        app:layout_constraintTop_toBottomOf="@+id/tbEmail"
+        android:onClick="registerUser"/>
 
     <TextView
         android:id="@+id/tvLogin3"
@@ -31,13 +32,13 @@
         android:text="Regristreren"
         android:textSize="44sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tvIdDruppel3"
+        app:layout_constraintBottom_toTopOf="@+id/tvDruppel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/tbIdDruppel4"
+        android:id="@+id/tbEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
@@ -50,19 +51,19 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNaam4" />
 
     <TextView
-        android:id="@+id/tvIdDruppel3"
+        android:id="@+id/tvDruppel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
         android:layout_marginEnd="245dp"
         android:text="ID druppel:"
-        app:layout_constraintBottom_toTopOf="@+id/tbIdNaam3"
+        app:layout_constraintBottom_toTopOf="@+id/tbDruppel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLogin3" />
 
     <EditText
-        android:id="@+id/tbIdDruppel3"
+        android:id="@+id/tbNaam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
@@ -76,7 +77,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNaam3" />
 
     <EditText
-        android:id="@+id/tbIdNaam3"
+        android:id="@+id/tbDruppel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
@@ -89,7 +90,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvIdDruppel3" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDruppel" />
 
     <TextView
         android:id="@+id/tvNaam3"
@@ -99,10 +100,10 @@
         android:layout_marginTop="11dp"
         android:layout_marginEnd="271dp"
         android:text="Naam:"
-        app:layout_constraintBottom_toTopOf="@+id/tbIdDruppel3"
+        app:layout_constraintBottom_toTopOf="@+id/tbNaam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbIdNaam3" />
+        app:layout_constraintTop_toBottomOf="@+id/tbDruppel" />
 
     <TextView
         android:id="@+id/tvNaam4"
@@ -112,9 +113,9 @@
         android:layout_marginTop="11dp"
         android:layout_marginEnd="274dp"
         android:text="Email:"
-        app:layout_constraintBottom_toTopOf="@+id/tbIdDruppel4"
+        app:layout_constraintBottom_toTopOf="@+id/tbEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbIdDruppel3" />
+        app:layout_constraintTop_toBottomOf="@+id/tbNaam" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
