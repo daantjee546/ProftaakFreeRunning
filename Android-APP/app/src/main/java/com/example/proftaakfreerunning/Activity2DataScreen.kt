@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.Toast
 
 class Activity2DataScreen : AppCompatActivity() {
 
@@ -38,6 +39,11 @@ class Activity2DataScreen : AppCompatActivity() {
             it.write(fileContents.toByteArray())
         }
         startActivity(Intent(this, MainActivity::class.java))
+    }
+
+    // blocks the return button, you have to solve the problem
+    override fun onBackPressed() {
+        Toast.makeText(applicationContext, "Back press disabled!", Toast.LENGTH_SHORT).show()
     }
 
 }
