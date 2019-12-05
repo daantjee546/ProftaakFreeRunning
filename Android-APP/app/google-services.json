@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "413382230782",
+    "firebase_url": "https://proftaak-smart-mobile.firebaseio.com",
+    "project_id": "proftaak-smart-mobile",
+    "storage_bucket": "proftaak-smart-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413382230782:android:6cd5ace7ae88ba31a61baf",
+        "android_client_info": {
+          "package_name": "com.example.proftaakfreerunning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413382230782-38bg91f08rng57j0r71tk2bqmarl46oj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhTEDzFgBG0_jB8T9ZOkRgPZDCStaObdw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413382230782-38bg91f08rng57j0r71tk2bqmarl46oj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
