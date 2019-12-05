@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>17</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>323</x>
+      <y>85</y>
+      <w>1071</w>
+      <h>731</h>
+    </coordinates>
+    <panel_attributes>
+
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>391</x>
+      <y>119</y>
+      <w>136</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Training #1
+valign=center
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>527</x>
+      <y>119</y>
+      <w>510</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>527</x>
+      <y>136</y>
+      <w>85</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>bg=red
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>578</x>
+      <y>136</y>
+      <w>119</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+layer=0
+</panel_attributes>
+    <additional_attributes>50.0;22.0;15.0;22.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>391</x>
+      <y>306</y>
+      <w>85</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>1
+fontsize=20
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>595</x>
+      <y>442</y>
+      <w>102</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>10.4
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>391</x>
+      <y>238</y>
+      <w>85</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>#
+--
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>595</x>
+      <y>238</y>
+      <w>102</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>S1
+--
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>697</x>
+      <y>238</y>
+      <w>102</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>S2
+--
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>799</x>
+      <y>238</y>
+      <w>102</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>S3
+fontsize=20
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>901</x>
+      <y>238</y>
+      <w>136</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>Total
+fontsize=20
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>697</x>
+      <y>442</y>
+      <w>102</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>5.4
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>799</x>
+      <y>442</y>
+      <w>102</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>8.7
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>901</x>
+      <y>442</y>
+      <w>136</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>24.5
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>391</x>
+      <y>374</y>
+      <w>85</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>2
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>595</x>
+      <y>374</y>
+      <w>102</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>9.5
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>697</x>
+      <y>374</y>
+      <w>102</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>5.8
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>799</x>
+      <y>374</y>
+      <w>102</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>8.5
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>901</x>
+      <y>374</y>
+      <w>136</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>23.8
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>391</x>
+      <y>442</y>
+      <w>85</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>3
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>595</x>
+      <y>306</y>
+      <w>102</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>10.1
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>697</x>
+      <y>306</y>
+      <w>102</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>5.9
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>799</x>
+      <y>306</y>
+      <w>102</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>8
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>901</x>
+      <y>306</y>
+      <w>136</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>23
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>153</y>
+      <w>119</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+layer=0</panel_attributes>
+    <additional_attributes>50.0;12.0;15.0;12.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>867</x>
+      <y>153</y>
+      <w>85</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+layer=0</panel_attributes>
+    <additional_attributes>30.0;12.0;12.0;12.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>238</y>
+      <w>119</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>Runner
+--
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>442</y>
+      <w>119</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>PL.C
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>306</y>
+      <w>119</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>PL.B
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>374</y>
+      <w>119</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>PL.A
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>799</x>
+      <y>136</y>
+      <w>85</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>type=decision
+bg=blue
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>918</x>
+      <y>136</y>
+      <w>85</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>type=termination
+bg=black
+lw=25
+fg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>663</x>
+      <y>136</y>
+      <w>85</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>bg=green
+fg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1462</x>
+      <y>204</y>
+      <w>85</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>bg=black
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>391</x>
+      <y>629</y>
+      <w>170</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>PL.D
+fontsize=20
+valign=center
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>561</x>
+      <y>629</y>
+      <w>119</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>9.9
+fontsize=20
+valign=center
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>799</x>
+      <y>629</y>
+      <w>119</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>0
+fontsize=20
+valign=center
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>629</y>
+      <w>119</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>0
+fontsize=20
+valign=center
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>918</x>
+      <y>629</y>
+      <w>119</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>12.4
+fontsize=20
+valign=center
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>391</x>
+      <y>578</y>
+      <w>646</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>Running
+fontsize=20
+valign=center
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1139</x>
+      <y>85</y>
+      <w>255</w>
+      <h>731</h>
+    </coordinates>
+    <panel_attributes>Weekly best
+Training #1
+fontsize=20
+--
+--
+PL.B          22.1
+PL.E          22.2
+PL.A          22.4
+PL.C          22.6
+PL.F          22.9
+PL.D          23.1</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
