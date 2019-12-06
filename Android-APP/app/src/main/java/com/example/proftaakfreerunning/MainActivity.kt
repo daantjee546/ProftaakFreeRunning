@@ -54,9 +54,6 @@ class MainActivity : AppCompatActivity() {
     fun buttonclickLogin(view: View)
     {
         checkBlijfIngelogd()
-
-
-
         startActivity(Intent(this@MainActivity, Activity2DataScreen::class.java))
     }
 
