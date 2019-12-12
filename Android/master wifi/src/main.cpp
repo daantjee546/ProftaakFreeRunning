@@ -1,6 +1,9 @@
 #include <Arduino.h>
+#include <HardwareSerial.h>
+#include "wifimaster.h"
 
 void setup() {
+  Serial.begin(115200);
   // put your setup code here, to run once:
 }
 
