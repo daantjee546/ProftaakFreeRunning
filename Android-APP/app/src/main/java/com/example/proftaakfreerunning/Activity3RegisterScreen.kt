@@ -34,7 +34,9 @@ class Activity3RegisterScreen : AppCompatActivity() {
 //        database.getReference("users").setValue(tbNaam.text)
 //        database.getReference("users").child(tbNaam.text.toString()).child("ID").setValue(tbDruppel.text)
 
-        database.getReference("users").child(tbNaam.text.toString()).child("ID").setValue(tbDruppel.text.toString())
+//        database.getReference("users").child(tbNaam.text.toString()).child("ID").setValue(tbDruppel.text.toString())
+        database.getReference("users").child(tbDruppel.text.toString()).child("Name").setValue(tbNaam.text.toString())
+//        database.getReference("users").child("ID").setValue(tbDruppel.text.toString()).child(tbNaam.text.toString()).child("ID")
     }
 
     public override fun onPause() {

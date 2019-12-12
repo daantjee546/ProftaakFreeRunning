@@ -18,6 +18,8 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.Boolean.FALSE
+import java.lang.Boolean.TRUE
 import kotlin.experimental.and
 
 private val TAG = MainActivity::class.java.simpleName
@@ -25,6 +27,7 @@ private val TAG = MainActivity::class.java.simpleName
 class MainActivity : AppCompatActivity() {
 
     private var blijfIngelogd = "false"
+    var boolLogInISCorrect: Boolean = FALSE
     var nfcForegroundUtil: NFCForegroundUtil? = null
 
     private var info: TextView? = null
@@ -51,9 +54,40 @@ class MainActivity : AppCompatActivity() {
         nfcForegroundUtil = NFCForegroundUtil(this)
     }
 
+    val valueEventListener = object : ValueEventListener {
+        override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+            for (ds in dataSnapshot.children) {
+                val keyName = ds.key
+                val ID = ds.child("ID").getValue(String::class.java)
+
+                if(dataSnapshot.child(tbIdDruppel.text.toString()).exists())
+                {
+                    boolLogInISCorrect = TRUE
+                    Toast.makeText(applicationContext, "Already exists!!", Toast.LENGTH_SHORT).show()
+                }
+//                    else if (!boolLogInISCorrect)
+//                    {
+//                        Toast.makeText(applicationContext, "Does not exist!!", Toast.LENGTH_SHORT).show()
+//                        boolLogInISCorrect = FALSE
+//                    }
+            }
+        }
+
+        override fun onCancelled(error: DatabaseError) {
+            // Failed to read value
+            Log.w(TAG, "Failed to read value.", error.toException())
+        }
+    }
+
     fun buttonclickLogin(view: View)
     {
         checkBlijfIngelogd()
+        checkIfLogInIsCorrect()
+    }
+
+    fun logInSuccessful()
+    {
         startActivity(Intent(this@MainActivity, Activity2DataScreen::class.java))
     }
 
@@ -74,13 +108,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun checkIfLogInIsCorrect()
-    {
-        val database: DatabaseReference
-        database = FirebaseDatabase.getInstance().getReference()
+    fun checkIfLogInIsCorrect() {
 
+        val database: DatabaseReference = FirebaseDatabase.getInstance().getReference()
         val myRef1 : DatabaseReference = database.child("users")
-        myRef1.orderByChild("ID").equalTo("555555")
+        myRef1.orderByChild("Name").equalTo(tbIdNaam.text.toString())
 
         // Read from the database
         val valueEventListener = object : ValueEventListener {
@@ -90,13 +122,15 @@ class MainActivity : AppCompatActivity() {
                     val keyName = ds.key
                     val ID = ds.child("ID").getValue(String::class.java)
 
-                    if(dataSnapshot.child("ID").exists())
+                    if(dataSnapshot.child(tbIdDruppel.text.toString()).exists())
                     {
-                        Toast.makeText(applicationContext, "Already exists!!", Toast.LENGTH_SHORT).show()
+                        boolLogInISCorrect = TRUE
+                        logInSuccessful()
                     }
-                    else
+                    else if (!boolLogInISCorrect)
                     {
-                        Toast.makeText(applicationContext, "Does not exist!!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(applicationContext, "ERROR LOGIN!!", Toast.LENGTH_SHORT).show()
+                        boolLogInISCorrect = FALSE
                     }
                 }
             }
@@ -125,7 +159,8 @@ class MainActivity : AppCompatActivity() {
                 Toast.LENGTH_LONG
             ).show()
             startActivity(
-                Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS)
+                Intent(android.provider.Settings.ACTION_HOME_SETTINGS)
+//                Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS)
             )
         }
     }
