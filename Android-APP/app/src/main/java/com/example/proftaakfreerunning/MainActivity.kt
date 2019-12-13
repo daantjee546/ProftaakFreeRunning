@@ -2,25 +2,21 @@ package com.example.proftaakfreerunning
 
 import android.annotation.SuppressLint
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.view.View
 import android.content.Intent
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.nfc.NfcAdapter
 import android.nfc.Tag
-import android.os.Build.ID
+import android.os.Bundle
 import android.util.Log
-import android.widget.ArrayAdapter
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Boolean.FALSE
 import java.lang.Boolean.TRUE
 import kotlin.experimental.and
+
 
 private val TAG = MainActivity::class.java.simpleName
 
@@ -29,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private var blijfIngelogd = "false"
     var boolLogInISCorrect: Boolean = FALSE
     var nfcForegroundUtil: NFCForegroundUtil? = null
+    var NameToOtherActivity: String = "HALLO"
 
     private var info: TextView? = null
 
@@ -54,32 +51,6 @@ class MainActivity : AppCompatActivity() {
         nfcForegroundUtil = NFCForegroundUtil(this)
     }
 
-    val valueEventListener = object : ValueEventListener {
-        override fun onDataChange(dataSnapshot: DataSnapshot) {
-
-            for (ds in dataSnapshot.children) {
-                val keyName = ds.key
-                val ID = ds.child("ID").getValue(String::class.java)
-
-                if(dataSnapshot.child(tbIdDruppel.text.toString()).exists())
-                {
-                    boolLogInISCorrect = TRUE
-                    Toast.makeText(applicationContext, "Already exists!!", Toast.LENGTH_SHORT).show()
-                }
-//                    else if (!boolLogInISCorrect)
-//                    {
-//                        Toast.makeText(applicationContext, "Does not exist!!", Toast.LENGTH_SHORT).show()
-//                        boolLogInISCorrect = FALSE
-//                    }
-            }
-        }
-
-        override fun onCancelled(error: DatabaseError) {
-            // Failed to read value
-            Log.w(TAG, "Failed to read value.", error.toException())
-        }
-    }
-
     fun buttonclickLogin(view: View)
     {
         checkBlijfIngelogd()
@@ -88,6 +59,12 @@ class MainActivity : AppCompatActivity() {
 
     fun logInSuccessful()
     {
+        val filename = "myName"
+        val fileContents = NameToOtherActivity
+        this.openFileOutput(filename, Context.MODE_PRIVATE).use {
+            it.write(fileContents.toByteArray())
+        }
+
         startActivity(Intent(this@MainActivity, Activity2DataScreen::class.java))
     }
 
@@ -110,9 +87,18 @@ class MainActivity : AppCompatActivity() {
 
     fun checkIfLogInIsCorrect() {
 
+        var name = tbIdNaam.text.toString()
+        var IDDruppel = tbIdDruppel.text.toString()
+
+        if(name == "" || IDDruppel == "")
+        {
+            name = "q"
+            IDDruppel = "q"
+        }
+
         val database: DatabaseReference = FirebaseDatabase.getInstance().getReference()
         val myRef1 : DatabaseReference = database.child("users")
-        myRef1.orderByChild("Name").equalTo(tbIdNaam.text.toString())
+        myRef1.orderByChild(IDDruppel).equalTo(name)
 
         // Read from the database
         val valueEventListener = object : ValueEventListener {
@@ -122,12 +108,16 @@ class MainActivity : AppCompatActivity() {
                     val keyName = ds.key
                     val ID = ds.child("ID").getValue(String::class.java)
 
-                    if(dataSnapshot.child(tbIdDruppel.text.toString()).exists())
+                    val IDName = dataSnapshot.child(IDDruppel).child("Name").getValue(String::class.java)
+
+                    if(dataSnapshot.child(IDDruppel).exists())
                     {
+                        NameToOtherActivity = IDName.toString()
+//                        Toast.makeText(applicationContext, IDName, Toast.LENGTH_SHORT).show()
                         boolLogInISCorrect = TRUE
                         logInSuccessful()
                     }
-                    else if (!boolLogInISCorrect)
+                    else
                     {
                         Toast.makeText(applicationContext, "ERROR LOGIN!!", Toast.LENGTH_SHORT).show()
                         boolLogInISCorrect = FALSE
@@ -187,7 +177,7 @@ class MainActivity : AppCompatActivity() {
         val buf = StringBuffer()
         for (i in data.indices) {
             buf.append(byteToHex(data[i]).toUpperCase())
-            buf.append(" ")
+            buf.append()
         }
         return buf.toString()
     }

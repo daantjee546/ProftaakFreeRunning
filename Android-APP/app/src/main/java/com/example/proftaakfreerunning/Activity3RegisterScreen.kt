@@ -82,7 +82,7 @@ class Activity3RegisterScreen : AppCompatActivity() {
         val buf = StringBuffer()
         for (i in data.indices) {
             buf.append(byteToHex(data[i]).toUpperCase())
-            buf.append(" ")
+            buf.append()
         }
         return buf.toString()
     }
