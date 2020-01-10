@@ -18,7 +18,7 @@ import java.lang.Boolean.TRUE
 import kotlin.experimental.and
 
 
-private val TAG = MainActivity::class.java.simpleName
+internal val TAG = MainActivity::class.java.simpleName
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     var boolLogInISCorrect: Boolean = FALSE
     var nfcForegroundUtil: NFCForegroundUtil? = null
     var NameToOtherActivity: String = "HALLO"
+    var IDDruppelToOtherActivity: String = "ID"
 
     private var info: TextView? = null
 
@@ -65,6 +66,12 @@ class MainActivity : AppCompatActivity() {
             it.write(fileContents.toByteArray())
         }
 
+        val filenameID = "MyID"
+        val fileContentsID = IDDruppelToOtherActivity
+        this.openFileOutput(filenameID, Context.MODE_PRIVATE).use {
+            it.write(fileContentsID.toByteArray())
+        }
+
         startActivity(Intent(this@MainActivity, Activity2DataScreen::class.java))
     }
 
@@ -89,6 +96,7 @@ class MainActivity : AppCompatActivity() {
 
         var name = tbIdNaam.text.toString()
         var IDDruppel = tbIdDruppel.text.toString()
+        IDDruppelToOtherActivity = IDDruppel
 
         if(name == "" || IDDruppel == "")
         {
@@ -109,11 +117,13 @@ class MainActivity : AppCompatActivity() {
                     val ID = ds.child("ID").getValue(String::class.java)
 
                     val IDName = dataSnapshot.child(IDDruppel).child("Name").getValue(String::class.java)
+//                    val GetCheckpoint1 = dataSnapshot.child(IDDruppel).child("Checkpoint1").getValue(String::class.java)
 
                     if(dataSnapshot.child(IDDruppel).exists())
                     {
                         NameToOtherActivity = IDName.toString()
-//                        Toast.makeText(applicationContext, IDName, Toast.LENGTH_SHORT).show()
+//                        IDDruppelToOtherActivity = GetCheckpoint1.toString()
+//                        Toast.makeText(applicationContext, GetCheckpoint1, Toast.LENGTH_SHORT).show()
                         boolLogInISCorrect = TRUE
                         logInSuccessful()
                     }
